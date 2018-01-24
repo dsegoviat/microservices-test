@@ -1,7 +1,7 @@
 package com.davidsegoviatomas.currencyconversionservice.controllers;
 
 import com.davidsegoviatomas.currencyconversionservice.model.CurrencyConversionBean;
-import com.davidsegoviatomas.currencyconversionservice.proxy.CurrencyExchangeServiceProxy;
+import com.davidsegoviatomas.currencyconversionservice.proxy.CurrencyExchangeProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 public class CurrencyConversionController {
 
     @Autowired
-    private CurrencyExchangeServiceProxy proxy;
+    private CurrencyExchangeProxy proxy;
 
     @GetMapping("/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversionBean convertCurrency(@PathVariable String from, @PathVariable String to,

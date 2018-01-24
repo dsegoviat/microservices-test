@@ -1,21 +1,18 @@
-package com.davidsegoviatomas.currencyexchangeserver;
+package com.davidsegoviatomas.currencyexchangeserver.controllers;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.netflix.feign.FeignAutoConfiguration;
 import org.springframework.cloud.netflix.feign.ribbon.FeignRibbonClientAutoConfiguration;
 import org.springframework.cloud.netflix.ribbon.RibbonAutoConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.context.annotation.Configuration;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+@Configuration
 @ImportAutoConfiguration({RibbonAutoConfiguration.class, FeignRibbonClientAutoConfiguration.class, FeignAutoConfiguration.class})
-public class CurrencyExchangeServerApplicationTests {
+public class FeignConfiguration {
 
-	@Test
-	public void contextLoads() {
-	}
+//    @Bean
+//    public FeignContext feignContext() {
+//        return new FeignContext();
+//    }
 
 }
